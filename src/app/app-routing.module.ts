@@ -4,8 +4,10 @@ import { LoginComponent } from './login/login.component';
 import { LoginSuccessComponent } from './login-success/login-success.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'login-success', component: LoginSuccessComponent },
+  { path: '**', redirectTo: '/login' },
 ];
 
 @NgModule({
