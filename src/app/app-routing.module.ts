@@ -5,8 +5,12 @@ import { LoginSuccessComponent } from './login-success/login-success.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'login-success', component: LoginSuccessComponent },
+  { path: 'login', component: LoginComponent, data: { title: 'Login' } },
+  {
+    path: 'login-success',
+    component: LoginSuccessComponent,
+    data: { title: 'Login Success' },
+  },
   { path: '**', redirectTo: '/login' },
 ];
 
